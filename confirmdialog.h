@@ -12,8 +12,13 @@ class ConfirmDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit ConfirmDialog(QWidget *parent = nullptr);
+    explicit ConfirmDialog(QString text, QWidget *parent = nullptr);
     ~ConfirmDialog();
+
+private slots:
+    void on_yesButton_clicked();
+
+    void on_noButton_clicked();
 
 private:
     Ui::ConfirmDialog *ui;

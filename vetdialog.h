@@ -15,6 +15,15 @@ public:
     explicit VetDialog(QWidget *parent = nullptr);
     ~VetDialog();
 
+private slots:
+    void on_okButton_clicked();
+
+    void on_cancelButton_clicked();
+
+signals:
+    void sendName(QString name);
+
+
 private:
     Ui::VetDialog *ui;
 };

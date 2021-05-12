@@ -11,10 +11,413 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>VetCalculator</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="calcTab">
+        <attribute name="title">
+         <string>Calculator</string>
+        </attribute>
+        <widget class="QWidget" name="verticalLayoutWidget_6">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>221</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="calcVetLabel">
+            <property name="text">
+             <string>Veterinarian</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="calcVetCB"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="calcSpeciesLabel">
+            <property name="text">
+             <string>Species</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="calcSpeciesCB"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="calcWtLabel">
+            <property name="text">
+             <string>Weight (lbs)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="calcWeightLineEdit"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_7">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>10</y>
+           <width>160</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QListWidget" name="allMedsView"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_8">
+         <property name="geometry">
+          <rect>
+           <x>580</x>
+           <y>10</y>
+           <width>160</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QListWidget" name="calcMedsView"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="calcAllButton">
+         <property name="geometry">
+          <rect>
+           <x>580</x>
+           <y>240</y>
+           <width>161</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Calculate</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="calcResultView">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>280</y>
+           <width>671</width>
+           <height>241</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>40</y>
+           <width>51</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QPushButton" name="calcAddButton">
+            <property name="text">
+             <string>&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="calcRemoveButton">
+            <property name="text">
+             <string>&lt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="calcRemoveAllButton">
+            <property name="text">
+             <string>&lt;&lt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="calcAddAllButton">
+            <property name="text">
+             <string>&gt;&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="manualTab">
+        <attribute name="title">
+         <string>Manual</string>
+        </attribute>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>110</y>
+           <width>211</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="weightLabel">
+            <property name="text">
+             <string>Weight (lb):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="manualWeightEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="doseLabel">
+            <property name="text">
+             <string>Dose (mg):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="manualDoseEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="concenLabel">
+            <property name="text">
+             <string>Concentration (mg/ml):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="manualConcEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="calcButton">
+            <property name="text">
+             <string>Calculate</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="manualResultLabel">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>110</y>
+           <width>371</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="vetTab">
+        <attribute name="title">
+         <string>Veterinarians</string>
+        </attribute>
+        <widget class="QWidget" name="verticalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>10</y>
+           <width>281</width>
+           <height>132</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="vetVertLayout">
+          <item>
+           <widget class="QLabel" name="vetLabel">
+            <property name="text">
+             <string>Veterinarian</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="vetComboBox"/>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="addVetButton">
+              <property name="text">
+               <string>New</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="deleteVetButton">
+              <property name="text">
+               <string>Delete</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Species</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="speciesCB"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>160</y>
+           <width>731</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="medLayout">
+          <item>
+           <widget class="QLabel" name="medLabel">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string>Medications</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="medTableWidget">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="columnCount">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addButton">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QPushButton" name="EditButton">
+              <property name="text">
+               <string>Edit</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="DeleteButton">
+              <property name="text">
+               <string>Delete</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="saveButton">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>30</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
